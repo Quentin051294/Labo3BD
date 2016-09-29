@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary
+namespace Model
 {
-    class CompanyContext : DbContext
+    public class CompanyContext : DbContext
     {
         public DbSet<Customer> Customers { get; set; }
         public CompanyContext() : base(@"Data Source=(localdb)\MSSQLLocalDb;Initial Catalog=ConcurrencyDemo")

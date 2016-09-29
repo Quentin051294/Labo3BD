@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary
+namespace Model
 {
-    class Customer
+    public class Customer
     {
         public double AccountBalance { get; set; }
         public String AddressLine1 { get; set; }
