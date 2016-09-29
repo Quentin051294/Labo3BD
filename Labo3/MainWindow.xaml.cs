@@ -27,6 +27,7 @@ namespace WPFClient
         {
             InitializeComponent();
             this.Loaded += MainWindow_Loaded;
+            //bonjour
         }
 
         void MainWindow_Loaded(object sender, RoutedEventArgs e)
