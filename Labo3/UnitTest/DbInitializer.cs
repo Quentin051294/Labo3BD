@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Tests
+namespace UnitTest
 {
     class DbInitializer : DropCreateDatabaseAlways<CompanyContext>
     {
@@ -25,5 +26,7 @@ namespace Model.Tests
             context.Customers.Add(customer);
             context.SaveChanges();
         }
+
+
     }
 }
