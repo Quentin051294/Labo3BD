@@ -10,7 +10,7 @@ namespace UnitTest
     [TestClass]
     public class UnitTest1
     {
-        /*[TestInitialize]
+        [TestInitialize]
         public void Setup()
         {
             Database.SetInitializer(new DbInitializer());
@@ -18,7 +18,7 @@ namespace UnitTest
             {
                 context.Database.Initialize(true);
             }
-        }*/
+        }
 
         [TestMethod]
         public void insertionFonctionnelle()
