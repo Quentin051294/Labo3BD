@@ -1,6 +1,7 @@
 ﻿using Model;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ namespace WPFClient
     public partial class MainWindow : Window
     {
         private CompanyContext _context = new CompanyContext();
-        private Customer _customer;
+        private Customer _customer, _customer1;
         public MainWindow()
         {
             InitializeComponent();
@@ -37,8 +38,9 @@ namespace WPFClient
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            _customer.AccountBalance += MontantAAjouterAuCompte.Value.Value;
-            _context.SaveChanges();
+                // Try to save changes, which may cause a conflict.
+                _customer.AccountBalance += MontantAAjouterAuCompte.Value.Value;
+                _context.SaveChanges();
         }
     }
 }
